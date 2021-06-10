@@ -20,7 +20,7 @@ def call_api(dated, dist_id):
                 print(center)
                 sms_text = "name of center=" + center["name"] + " address=" + center["address"] + " slots available=" + str(session["available_capacity"]) + " vaccine_name=" + session["vaccine"]
                 if session["available_capacity"] == 0:
-                    #send_email(sms_text, "diptendu.chakraborty.2012@gmail.com")
+                    send_email(sms_text, "diptendu.chakraborty.2012@gmail.com")
                     #send_email(sms_text, "priyankachoudhury93@gmail.com")
                     send_email2("diptendu.chakraborty.2012@gmail.com", "diptendu.chakraborty.2012@gmail.com", "Krishna@166", sms_text)
 
@@ -33,6 +33,7 @@ def send_email(message, receiver_email):
     password = "Krishna@166"
     message = message
     context = ssl.create_default_context()
+    smtplib.SMTP('172.17.0.1')
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
