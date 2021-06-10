@@ -35,4 +35,5 @@ def send_email(message,receiver_email):
 
 
 if __name__ == '__main__':
-    call_api("10-06-2021", "247")
+    today = date.today()
+    call_api(str(today), "247")
