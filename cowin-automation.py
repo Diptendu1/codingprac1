@@ -5,12 +5,10 @@ from datetime import date
 
 
 def call_api(dated, dist_id):
-    print(dated)
     api_uri = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=" + dist_id + "&date=" + dated
     result = requests.get(api_uri)
     result_json = json.loads(result.text)
     centers = result_json["centers"]
-    print(centers)
     for center in centers:
         sessions = center["sessions"]
         for session in sessions:
