@@ -31,7 +31,7 @@ def send_email(message, receiver_email):
     smtp_server = "smtp.gmail.com"
     sender_email = "diptendu.chakraborty.2012@gmail.com"  # Enter your address
     receiver_email = receiver_email # Enter receiver address
-    password = "Krishna@166"
+    password = ""
     message = message
     context = ssl.create_default_context()
     #smtplib.SMTP('172.17.0.1')
