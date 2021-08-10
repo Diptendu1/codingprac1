@@ -23,7 +23,6 @@ def call_api(dated, dist_id):
                 if session["available_capacity"] == 0:
                     send_email(sms_text, "diptendu.chakraborty.2012@gmail.com")
                     send_email(sms_text, "priyankachoudhury93@gmail.com")
-                    #send_email2("diptendu.chakraborty.2012@gmail.com", "diptendu.chakraborty.2012@gmail.com", "Krishna@166", sms_text)
 
 
 def send_email(message, receiver_email):
